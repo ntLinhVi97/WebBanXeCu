@@ -38,8 +38,20 @@ a {
   text-align: right;
   padding-right: 0;
 }
-#loginButton1{
+#loginButton1, #signUpButton1{
   background-color: #3b1d8f;
+  width: 49%;
+}
+
+#cancelButton {
+  background-color:#e6e6e6;
+  color: black;
+  border-color: black;
+  width: 49%;
+}
+
+#signUpButton{
+  text-align: right;
 }
 
 #signUpBtn{

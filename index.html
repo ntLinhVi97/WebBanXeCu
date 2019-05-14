@@ -15,72 +15,164 @@
 <body>
 
 	<div class="container">
-		<div class="row">
-			<div class="col-3">
+		<div id="signInSection">
+			<div class="row">
+				<div class="col-3">
+				</div>
+				<div class="col-6">
+					<h1 class="companyName">Hệ thống quản lí xe cũ TVV</h1>
+				</div>
 			</div>
-			<div class="col-6">
-				<h1 class="companyName">Hệ thống quản lí xe cũ TVV</h1>
+			<div class="row">
+				<div class="col-3">
+				</div>
+				<div class="col-6">
+					<h1 class="welcome">Xin chào!</h1>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-			</div>
-			<div class="col-6">
-				<h1 class="welcome">Xin chào!</h1>
-			</div>
-		</div>
-		<!--login-->
-		<!-- -->
-    <div class="clearfix"> </div>
+			<!--login-->
+			<!-- -->
+			<div class="clearfix"> </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- Load Login -->
-                <div class="panel panel-default" id="login">
-                    <div class="panel-body1">
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-2" id="login">
-                                <h5 class="lableLogin">Tên đăng nhập: </h5>
-                            </div>
-                            <div class="col-md-3">
-                                <input id="userName" class="form-control" type="text" />
-                            </div>
-                        </div>
-                        <!-- ---- -->
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-2" id="login">
-                                <h5 class="lableLogin">Mật khẩu: </h5>
-                            </div>
-                            <div class="col-md-3">
-                                <input id="password" class="form-control" type="password" />
-                            </div>
-                        </div>
-                        <!-- ---- -->
-                        <div class="row">
-                            <div class="col-md-6"></div>
-                            <div class="col-md-2" id="loginButton">
-                                <button type="button" onclick="login()" class="btn btn-info" id="loginButton1">Đăng nhập</button>
-                            </div>
-												</div>
-												<!-- --- -->
-												<div class="row">
-                            <div class="col-md-6"></div>    
-                            <div class="col-md-2" id="signUpBtn">
-                                <button type="button" class="btn btn-link" id="textSignUPBtn">Đăng kí</button>
-                            </div>
-												</div>
-												<!-- -->
-												<div class="row">
-														<div class="col-md-2"><img src="./public/img/xehoi.jpg"></div> 
-												</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-	</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Load Login -->
+						<div class="panel panel-default" id="login">
+							<div class="panel-body1">
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-2" id="login">
+										<h5 class="lableLogin">Tên đăng nhập: </h5>
+									</div>
+									<div class="col-md-3">
+										<input id="userName" class="form-control" type="text" />
+									</div>
+								</div>
+								<!-- ---- -->
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-2" id="login">
+										<h5 class="lableLogin">Mật khẩu: </h5>
+									</div>
+									<div class="col-md-3">
+										<input id="password" class="form-control" type="password" />
+									</div>
+								</div>
+								<!-- ---- -->
+								<div class="row">
+									<div class="col-md-5"></div>
+									<div class="col-md-3" id="loginButton">
+										<button type="button" onclick="login()" class="btn btn-info" id="loginButton1">Đăng nhập</button>
+									</div>
+								</div>
+								<!-- --- -->
+								<div class="row">
+									<div class="col-md-6"></div>
+									<div class="col-md-2" id="signUpBtn">
+										<button type="button" class="btn btn-link" id="textSignUPBtn">Đăng kí</button>
+									</div>
+								</div>
+								<!-- -->
+								<div class="row">
+									<div class="col-md-2"><img src="./public/img/xehoi.jpg"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--SignUP-->
+			<div id="signUpSection">
+				<div class="row">
+					<div class="col-5">
+					</div>
+					<div class="col-2">
+						<h1 class="companyName">Đăng Kí</h1>
+					</div>
+				</div>
+				<!-- -->
+				<div class="clearfix"> </div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<!-- Load signUp -->
+							<div class="panel panel-default" id="login">
+								<div class="panel-body1">
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Tên đăng nhập: </h5>
+										</div>
+										<div class="col-md-3">
+											<input id="userNameSignUp" class="form-control" type="text" />
+										</div>
+									</div>
+									<!-- ---- -->
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Mã nhân viên: </h5>
+										</div>
+										<div class="col-md-3">
+											<input id="userID" class="form-control" type="password" />
+										</div>
+									</div>
+									<!-- -- -->
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Bộ phận: </h5>
+										</div>
+										<div class="col-md-3">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>Tiếp đón</option>
+												<option>Bán xe</option>
+												<option>Kĩ thuật</option>
+												<option>Xử lí</option>
+											</select>
+										</div>
+									</div>
+									<!-- ---- -->
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Mật khẩu: </h5>
+										</div>
+										<div class="col-md-3">
+											<input id="passwordSignUp" class="form-control" type="password" />
+										</div>
+									</div>
+									<!-- ---- -->
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Nhập lại mật khẩu: </h5>
+										</div>
+										<div class="col-md-3">
+											<input id="passwordSignUp2" class="form-control" type="password" />
+										</div>
+									</div>
+									<!-- --- -->
+									<div class="row">
+										<div class="col-md-6"></div>
+										<div class="col-md-3" id="signUpButton">
+												<button type="button" onclick="signUp()" class="btn btn-info" id="cancelButton">Hủy</button>
+												<button type="button" onclick="signUp()" class="btn btn-info" id="signUpButton1">Đăng kí</button>
+										</div>
+									</div>
+									<!-- -->
+									<div class="row">
+										<div class="col-md-2"><img src="./public/img/xehoi.jpg"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 </body>
 
