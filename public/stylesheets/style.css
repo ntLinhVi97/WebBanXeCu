@@ -11,7 +11,14 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   color: #3b1d8f;
   font-weight: 36;
-  margin-top: 7rem;
+  margin-top: 7rem; 
+}
+
+.header{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3b1d8f;
+  font-weight: 36;
+  margin-top: 3rem; 
 }
 
 .welcome{
@@ -38,12 +45,12 @@ a {
   text-align: right;
   padding-right: 0;
 }
-#loginButton1, #signUpButton1{
+#loginButton1, #signUpButton1, #okbtnSaveOwner, #okbtnSaveBike{
   background-color: #3b1d8f;
   width: 49%;
 }
 
-#cancelButton {
+#cancelButton, #cancelbtnSaveOwner, #cancelbtnSaveBike {
   background-color:#e6e6e6;
   color: black;
   border-color: black;
@@ -63,5 +70,29 @@ a {
   text-decoration: underline;
 }
 
+#saveinfoOwnerActive, #saveinfoMotoBikeActive{
+  background-color: #3b1d8f;
+  border: 0;
+  width: 100%;
+}
 
+#saveinfoOwner, #saveinfoMotoBike{
+  background-color: #d4e3fc;
+  border: 0;
+  color: black;
+  font-size: 16px;
+}
+
+#nav {
+  background-color: #d4e3fc;
+  background-image: url("./../img/nav_car.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 300px 150px;
+  padding: 0;
+}
+
+#btnGroup {
+  width: 100%;
+}
 
