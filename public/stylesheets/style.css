@@ -45,12 +45,12 @@ a {
   text-align: right;
   padding-right: 0;
 }
-#loginButton1, #signUpButton1, #okbtnSaveOwner, #okbtnSaveBike{
+#loginButton1, #signUpButton1, #okbtnSaveOwner, #okbtnSaveBike, #okbtnSaveTst, #okbtnSaveCareStatus, #okbtnSaveDtm, #okbtnSaveEbbc, #okbtnSaveEbsc, #okbtnSaveEp, #okbtnSaveRp{
   background-color: #3b1d8f;
   width: 49%;
 }
 
-#cancelButton, #cancelbtnSaveOwner, #cancelbtnSaveBike {
+#cancelButton, #cancelbtnSaveOwner, #cancelbtnSaveBike, #cancelbtnSaveTst, #cancelbtnCarStatus, #cancelbtnDtm, #cancelbtnEbbc, #cancelbtnEbsc, #cancelbtnEp, #cancelbtnRp{
   background-color:#e6e6e6;
   color: black;
   border-color: black;
@@ -70,29 +70,34 @@ a {
   text-decoration: underline;
 }
 
-#saveinfoOwnerActive, #saveinfoMotoBikeActive{
+#saveinfoOwnerActive, #saveinfoMotoBikeActive, #saveinfoCustomerActive, #saveinfoTransactionActive, #saveinfoStatusActive, #saveinfoToFixActive, #fixPlanActive, #deteminePriceActive, #exportBillForBuyCarActive, #exportBillForSellCarActive, #reportActive, #exportPriceActive{
   background-color: #3b1d8f;
   border: 0;
   width: 100%;
 }
 
-#saveinfoOwner, #saveinfoMotoBike{
+#saveinfoOwner, #saveinfoMotoBike, #saveinfoCustomer, #saveinfoTransaction, #saveinfoStatus, #saveinfoToFix, #fixPlan, #deteminePrice, #exportBillForBuyCar, #exportBillForSellCar, #report, #exportPrice{
   background-color: #d4e3fc;
   border: 0;
   color: black;
   font-size: 16px;
 }
 
-#nav {
+#navForRegister, #navForSeller {
   background-color: #d4e3fc;
   background-image: url("./../img/nav_car.jpg");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 300px 150px;
   padding: 0;
+  margin-top:20px;
 }
 
 #btnGroup {
+  width: 100%;
+}
+
+#searchbtn {
   width: 100%;
 }
 
