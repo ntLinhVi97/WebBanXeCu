@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.29",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "eslint": "^5.16.0",
