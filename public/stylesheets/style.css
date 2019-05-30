@@ -83,7 +83,7 @@ a {
   font-size: 16px;
 }
 
-#navForRegister, #navForSeller {
+#navForRegister, #navForSeller, #navForManager, #navForTechnical {
   background-color: #d4e3fc;
   background-image: url("./../img/nav_car.jpg");
   background-repeat: no-repeat;
@@ -98,6 +98,10 @@ a {
 }
 
 #searchbtn {
+  width: 100%;
+}
+
+#imgManager {
   width: 100%;
 }
 
