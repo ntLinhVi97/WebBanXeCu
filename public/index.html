@@ -114,7 +114,7 @@
 										<input id="userNameSignUp" class="form-control" type="text" />
 									</div>
 								</div>
-								<!-- ---- -->
+								<!-- ----
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-3">
@@ -123,7 +123,7 @@
 									<div class="col-md-3">
 										<input id="userID" class="form-control" type="password" />
 									</div>
-								</div>
+								</div> -->
 								<!-- -- -->
 								<div class="row">
 									<div class="col-md-3"></div>
@@ -314,7 +314,7 @@
 											<h5 class="lableLogin">Mã số xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="ID" class="form-control" type="number" readonly="readonly" />
+											<input id="mtbID" class="form-control" type="number" readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -324,7 +324,7 @@
 											<h5 class="lableLogin">Loại xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="CMND" class="form-control" type="text" />
+											<input id="carType" class="form-control" type="text" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -334,7 +334,7 @@
 											<h5 class="lableLogin">Biển số xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="bikeID" class="form-control" type="text" />
+											<input id="bikeID" class="form-control" type="text" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -344,7 +344,7 @@
 											<h5 class="lableLogin">Giá mua: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="price" class="form-control" type="number" />
+											<input id="price" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -355,7 +355,7 @@
 										</div>
 										<div class="col-md-6">
 											<input id="OwnerID" class="form-control" type="number"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- --- -->
@@ -427,7 +427,7 @@
 										</div>
 										<div class="col-md-5">
 											<input id="customerID" class="form-control" type="number"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 								</div>
@@ -441,7 +441,7 @@
 											<h5 class="lableLogin">Họ tên: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="customerName" class="form-control" type="text" />
+											<input id="customerName" class="form-control" type="text" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -451,7 +451,7 @@
 											<h5 class="lableLogin">CMND: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="customerCMND" class="form-control" type="number" />
+											<input id="customerCMND" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -461,7 +461,7 @@
 											<h5 class="lableLogin">Địa chỉ: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="customerAddress" class="form-control" type="text" />
+											<input id="customerAddress" class="form-control" type="text" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -471,7 +471,7 @@
 											<h5 class="lableLogin">Điện thoại: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="customerPhone" class="form-control" type="number" />
+											<input id="customerPhone" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -481,7 +481,7 @@
 											<h5 class="lableLogin">Email: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="customerEmail" class="form-control" type="email" />
+											<input id="customerEmail" class="form-control" type="email" value=""/>
 										</div>
 									</div>
 									<!---->
@@ -492,7 +492,7 @@
 										</div>
 										<div class="col-md-6">
 											<textarea class="form-control" rows="5" id="customerRequest"
-												placeholder="Dòng xe, phân khối, màu,..."></textarea>
+												placeholder="Dòng xe, phân khối, màu,..." value=""></textarea>
 										</div>
 									</div>
 									<!---->
@@ -500,9 +500,9 @@
 										<div class="col-md-5"></div>
 										<div class="col-md-6" id="signUpButton">
 											<button type="button" onclick="canCel()" class="btn btn-info"
-												id="cancelbtnSaveBike">Hủy</button>
+												id="cancelbtnSaveCustomer">Hủy</button>
 											<button type="button" onclick="signUp()" class="btn btn-info"
-												id="okbtnSaveBike">Đồng
+												id="okbtnSaveCustomer">Đồng
 												ý</button>
 										</div>
 									</div>
@@ -530,7 +530,7 @@
 											<h5 class="lableLogin">Mã khách hàng: </h5>
 										</div>
 										<div class="col-md-5">
-											<input id="customerIDtst" class="form-control" type="number" />
+											<input id="customerIDtst" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -540,7 +540,7 @@
 											<h5 class="lableLogin">CMND: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="tstCMNDsearch" class="form-control" type="number" />
+											<input id="tstCMNDsearch" class="form-control" type="number"value="" />
 										</div>
 										<div class="col-md-1">
 											<button type="button" class="btn">
@@ -557,7 +557,7 @@
 											<h5 class="lableLogin">Họ tên: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="tstName" class="form-control" type="text" readonly="readonly" />
+											<input id="tstName" class="form-control" type="text" readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -568,7 +568,7 @@
 										</div>
 										<div class="col-md-6">
 											<input id="tstCMND" class="form-control" type="number"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -579,7 +579,7 @@
 										</div>
 										<div class="col-md-6">
 											<input id="tstAddress" class="form-control" type="text"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -590,7 +590,7 @@
 										</div>
 										<div class="col-md-6">
 											<input id="tstPhone" class="form-control" type="number"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -601,7 +601,7 @@
 										</div>
 										<div class="col-md-6">
 											<input id="tstEmail" class="form-control" type="email"
-												readonly="readonly" />
+												readonly="readonly" value=""/>
 										</div>
 									</div>
 									<!---->
@@ -613,7 +613,7 @@
 										<div class="col-md-6">
 											<textarea class="form-control" rows="5" id="tstRequest"
 												placeholder="Dòng xe, phân khối, màu,..."
-												readonly="readonly"></textarea>
+												readonly="readonly" value=""></textarea>
 										</div>
 									</div>
 									<!----->
@@ -623,7 +623,7 @@
 											<h5 class="lableLogin">Mã xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="tstIDcar" class="form-control" type="email" />
+											<input id="tstIDcar" class="form-control" type="email" value=""/>
 										</div>
 									</div>
 									<!---->
@@ -633,7 +633,7 @@
 											<h5 class="lableLogin">Giá bán: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="tstPrice" class="form-control" type="email" />
+											<input id="tstPrice" class="form-control" type="email" value=""/>
 										</div>
 									</div>
 
@@ -644,7 +644,7 @@
 											<h5 class="lableLogin">Ngày GD: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="tstDate" class="form-control" type="date" />
+											<input id="tstDate" class="form-control" type="date" value=""/>
 										</div>
 									</div>
 
@@ -716,7 +716,7 @@
 										</div>
 										<div class="col-md-6">
 											<textarea class="form-control" rows="5" id="status"
-												placeholder="Mới, cũ, chi tiết hỏng hóc,..."></textarea>
+												placeholder="Mới, cũ, chi tiết hỏng hóc,..." value=""></textarea>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -726,7 +726,7 @@
 											<h5 class="lableLogin">Giá mua thấp nhất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="minPrice" class="form-control" type="number" />
+											<input id="minPrice" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -736,7 +736,7 @@
 											<h5 class="lableLogin">Giá mua cao nhất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="maxPrice" class="form-control" type="number" />
+											<input id="maxPrice" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- ---- -->
@@ -746,7 +746,7 @@
 											<h5 class="lableLogin">Mã số xe được bán: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="sttCarID" class="form-control" type="number" />
+											<input id="sttCarID" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 
@@ -831,7 +831,7 @@
 											<h5 class="lableLogin">Mã số xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="dtmCarID" class="form-control" type="number" />
+											<input id="dtmCarID" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -841,7 +841,7 @@
 											<h5 class="lableLogin">Giá bán: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="dtmPrice" class="form-control" type="number" />
+											<input id="dtmPrice" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 
@@ -881,7 +881,7 @@
 											<h5 class="lableLogin">Ngày xuất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="ebbcDate" class="form-control" type="date" />
+											<input id="ebbcDate" class="form-control" type="date" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -892,12 +892,12 @@
 										</div>
 										<div class="col-md-3">
 											<div class="radio">
-												<label><input type="radio" name="ebbcDate">Ngày</label>
+												<label><input type="radio" name="ebbcDateRadio">Ngày</label>
 											</div>
 										</div>
 										<div class="col-md-2">
 											<div class="radio">
-												<label><input type="radio" name="ebbcMonth">Tháng</label>
+												<label><input type="radio" name="ebbcMonthRadio">Tháng</label>
 											</div>
 										</div>
 									</div>
@@ -938,7 +938,7 @@
 											<h5 class="lableLogin">Ngày xuất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="ebscDate" class="form-control" type="date" />
+											<input id="ebscDate" class="form-control" type="date" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -949,12 +949,12 @@
 										</div>
 										<div class="col-md-3">
 											<div class="radio">
-												<label><input type="radio" name="ebbcDate">Ngày</label>
+												<label><input type="radio" name="ebscDateRadio">Ngày</label>
 											</div>
 										</div>
 										<div class="col-md-2">
 											<div class="radio">
-												<label><input type="radio" name="ebscMonth">Tháng</label>
+												<label><input type="radio" name="ebscMonthRadio">Tháng</label>
 											</div>
 										</div>
 									</div>
@@ -995,7 +995,7 @@
 											<h5 class="lableLogin">Ngày xuất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="epDate" class="form-control" type="date" />
+											<input id="epDate" class="form-control" type="date" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -1005,7 +1005,7 @@
 											<h5 class="lableLogin">Mã số xe: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="epCarID" class="form-control" type="number" />
+											<input id="epCarID" class="form-control" type="number" value=""/>
 										</div>
 									</div>
 
@@ -1045,7 +1045,7 @@
 											<h5 class="lableLogin">Ngày xuất: </h5>
 										</div>
 										<div class="col-md-6">
-											<input id="rpcDate" class="form-control" type="date" />
+											<input id="rpcDate" class="form-control" type="date" value=""/>
 										</div>
 									</div>
 									<!-- -- -->
@@ -1056,12 +1056,12 @@
 										</div>
 										<div class="col-md-3">
 											<div class="radio">
-												<label><input type="radio" name="rpDate">Ngày</label>
+												<label><input type="radio" name="rpDateRadio">Ngày</label>
 											</div>
 										</div>
 										<div class="col-md-2">
 											<div class="radio">
-												<label><input type="radio" name="rpMonth">Tháng</label>
+												<label><input type="radio" name="rpMonthRadio">Tháng</label>
 											</div>
 										</div>
 									</div>
