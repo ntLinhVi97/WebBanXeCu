@@ -27,20 +27,8 @@ function showSignUp() {
         showLogin();
     })
     $('#signUpButton1').click(function () {
-        registerAccount();
+        showLogin();
     })
-}
-
-//create account request
-var accountInfo = ["#userNameSignUp", "#exampleFormControlSelect1", "#passwordSignUp"];
-function registerAccount(){
-    $.ajax({
-        type: 'POST',
-        url: 'localhost:3000/register',
-        data: accountInfo,
-        dataType: "text",
-        success: function(resultData) { alert("Save Complete") }
-  });  
 }
 
 // registration
@@ -302,3 +290,22 @@ $(document).ready(() => {
     })
 
 })
+
+//create account request
+var accountInfo = ["#userNameSignUp", "#exampleFormControlSelect1", "#passwordSignUp"];
+function registerAccount(){
+    var hoTen = $('#userNameSignUp').val();
+    var boPhan = $('#exampleFormControlSelect1 option:selected').text();
+    var matKhau = $('#passwordSignUp').val();
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:3000/register/registerAccount',
+        data: accountInfo,
+        dataType: {
+            hoTen: hoTen,
+            boPhan: boPhan,
+            matKhau: matKhau
+        },
+        success: function(resultData) { alert("Save Complete") }
+  });  
+}
