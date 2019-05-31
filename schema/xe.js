@@ -4,7 +4,11 @@ var schema = new mongoose.Schema({
     tinhtrang: String,
     giamuathapnhat: String,
     giamuacaonhat: String,
-    id_suachua: String
+    id_suachua: String,
+    loai: String,
+    biensoxe: String,
+    giamua: String,
+    machuxe: String
 });
 
 var xe = mongoose.model('xe', schema);

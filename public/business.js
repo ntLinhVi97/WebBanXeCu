@@ -16,6 +16,10 @@ function showLogin() {
     $('#signUpBtn').click(function () {
         showSignUp();
     })
+
+    $('#loginButton1').click(function () {
+        signIn();
+    })
 }
 
 // sign up session
@@ -27,8 +31,10 @@ function showSignUp() {
         showLogin();
     })
     $('#signUpButton1').click(function () {
-        showLogin();
+        registerAccount();
+
     })
+
 }
 
 // registration
@@ -42,6 +48,7 @@ function showInfoOwner() {
     $('#saveinfoMotoBike').show();
     $('#inforMotobikeForm').hide();
     $('#inforOwnerForm').show();
+    //getLastCarID();
 
     $('#saveinfoMotoBike').click(function () {
         hideAll();
@@ -51,6 +58,8 @@ function showInfoOwner() {
         $("#userNameSaveInfor").val('');
         blankValue(inforOwnerAtt);
     })
+
+
 }
 
 var inforMotoAtt = ["#bikeID", "#carType", "mtbID", "#price", "#OwnerID"];
@@ -63,6 +72,7 @@ function showInforMotobike() {
     $('#saveinfoMotoBike').hide();
     $('#inforOwnerForm').hide();
     $('#inforMotobikeForm').show();
+    //getLastOwnerID();
 
     $('#saveinfoOwner').click(function () {
         hideAll();
@@ -91,7 +101,7 @@ function showInforCustomer() {
         showInforTransaction();
     });
 
-    $('#cancelbtnSaveCustomer').click(function() {
+    $('#cancelbtnSaveCustomer').click(function () {
         $("#customerID").val('');
         blankValue(inforCustomerAtt);
     })
@@ -110,7 +120,7 @@ function showInforTransaction() {
         showInforCustomer();
     });
 
-    $('#cancelbtnSaveTst').click(function() {
+    $('#cancelbtnSaveTst').click(function () {
         $("#customerIDtst").val('');
         blankValue(inforTransactionAtt);
     })
@@ -128,7 +138,7 @@ function showInforStatus() {
     hideElements(technical1);
     showElements(technical2);
 
-    $('#cancelbtnCarStatus').click(function() {
+    $('#cancelbtnCarStatus').click(function () {
         $("#status").val('');
         blankValue(inforStatusAtt);
     })
@@ -156,7 +166,7 @@ function showDeteminePrice() {
 
     handleNavbtnForManager();
 
-    $('#cancelbtnDtm').click(function() {
+    $('#cancelbtnDtm').click(function () {
         $("#dtmCarID").val('');
         blankValue(inforStatusAtt);
     })
@@ -174,7 +184,7 @@ function showExportBillForBuyCar() {
 
     handleNavbtnForManager();
 
-    $('#cancelbtnEbbc').click(function() {
+    $('#cancelbtnEbbc').click(function () {
         $("#ebbcDate").val('');
         // $("#ebbcDateRadio").checked = false;
         // $("#ebbcMonthRadio").checked = false;
@@ -193,7 +203,7 @@ function showExportBillForSellCar() {
 
     handleNavbtnForManager();
 
-    $('#cancelbtnEbsc').click(function() {
+    $('#cancelbtnEbsc').click(function () {
         $("#ebscDate").val('');
         $("#ebscDateRadio").prop('checked', false)
         $("#ebscMonthRadio").prop('checked', false)
@@ -214,7 +224,7 @@ function showReport() {
 
     handleNavbtnForManager();
 
-    $('#cancelbtnRp').click(function() {
+    $('#cancelbtnRp').click(function () {
         $("#rpcDate").val('');
         // $("#ebbcDateRadio").checked = false;
         // $("#ebbcMonthRadio").checked = false;
@@ -232,7 +242,7 @@ function showExportPrice() {
 
     handleNavbtnForManager();
 
-    $('#cancelbtnEp').click(function() {
+    $('#cancelbtnEp').click(function () {
         $("#epDate").val('');
         $("#epCarID").val('');
         // $("#ebbcDateRadio").checked = false;
@@ -283,7 +293,7 @@ function blankValue(arr) {
 
 $(document).ready(() => {
 
-    showExportBillForSellCar();
+    showInfoOwner();
 
     $(".logoutbtn").click(function () {
         showLogin();
@@ -291,21 +301,149 @@ $(document).ready(() => {
 
 })
 
+// ############## API request #############
+
 //create account request
-var accountInfo = ["#userNameSignUp", "#exampleFormControlSelect1", "#passwordSignUp"];
-function registerAccount(){
-    var hoTen = $('#userNameSignUp').val();
-    var boPhan = $('#exampleFormControlSelect1 option:selected').text();
+function registerAccount() {
+    var tendangnhap = $('#userNameSignUp').val();
+    var bophan = $('#exampleFormControlSelect1 option:selected').text();
     var matKhau = $('#passwordSignUp').val();
     $.ajax({
         type: 'POST',
         url: 'localhost:3000/register/registerAccount',
-        data: accountInfo,
-        dataType: {
-            hoTen: hoTen,
-            boPhan: boPhan,
-            matKhau: matKhau
+        data: {
+            tendangnhap: tendangnhap,
+            bophan: bophan,
+            matkhau: matkhau
         },
-        success: function(resultData) { alert("Save Complete") }
-  });  
+        dataType: "json",
+        success: function (resultData) {
+            alert("Save Complete");
+            showLogin();
+        }
+    });
 }
+
+function signIn() {
+    var tendangnhap = $('#userName').val();
+    var matkhau = $('#password').val();
+    $.ajax({
+        type: 'GET',
+        url: 'localhost:3000/signIn',
+        data: {
+            tendangnhap: tendangnhap,
+            matkhau: matkhau
+        },
+        dataType: "json",
+        success: function (resultData) {
+            if (resultData == null) {
+                alert("Đăng nhập không thành công!");
+            }
+            else {
+                if (resultData.bophan == "Tiếp đón") {
+                    showInfoOwner();
+                }
+                else if (resultData.bophan == "Bán xe") {
+                    showInforCustomer();
+                }
+                else if (resultData.bophan == "Kĩ thuật") {
+                    showInforStatus();
+                }
+                showDeteminePrice();
+            }
+        }
+    });
+}
+
+function saveInfoOwner() {
+    var hoTen = $('#userNameSaveInfor').val();
+    var cmnd = $('#CMND').val();
+    var diaChi = $('#address').val();
+    var dienThoai = $('#phone').val();
+    var email = $('#email').val();
+    // ma so xe tu generate
+    // var maSoXe= $('#carID').val();
+
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:3000/saveInfoOwner',
+        data: {
+            hoten: hoTen,
+            cmnd: cmnd,
+            diachi: diaChi,
+            sdt: dienThoai,
+            email: email
+        },
+        dataType: "json",
+        success: function (resultData) {
+            alert("Save Complete");
+        }
+    });
+}
+
+var lastCarID = 0;
+var generateCarID = 0;
+function getLastCarID(){
+    $.ajax({
+        type: 'GET',
+        url: 'localhost:3000/getLastCarID',
+        dataType: "String",
+        success: function (resultData) {
+            console.log("getLastCarID success!");
+            this.lastCarID = parseInt(resultData);
+            this.generateCarID = lastCarID + 1;
+            $("#carID").val(this.generateCarID);
+        }
+    });
+}
+
+var lastOwnerID = 0;
+var generateOwnerID = 0;
+function getLastOwnerID() {
+    $.ajax({
+        type: 'GET',
+        url: 'localhost:3000/getLastOwnerID',
+        dataType: "String",
+        success: function (resultData) {
+            console.log("getLastOwnerID success!");
+            this.lastOwnerID = parseInt(resultData);
+            //this.generateOwnerID = lastOwnerID + 1;
+           
+            $("#mtbID").val(this.generateCarID);
+            $("#OwnerID").val(this.lastOwnerID);
+        }
+    });
+}
+
+function saveInfoMotoBike() {
+    // mtbID tu generate
+    //var mtbID = $('#mtbID').val();
+    var loai = $('#carType').val();
+    var biensoxe = $('#bikeID').val();
+    var giamua = $('#price').val();
+    var email = $('#OwnerID').val();
+
+    var maSoXe = generateCarID;
+    var maNguoiBan = this.lastOwnerID;
+
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:3000/saveInfoMotoBike',
+        data: {
+            hoten: hoTen,
+            cmnd: cmnd,
+            diachi: diaChi,
+            sdt: dienThoai,
+            email: email,
+            maSoXe: maSoXe,
+            maNguoiBan: maNguoiBan
+        },
+        dataType: "json",
+        success: function (resultData) {
+            alert("Save Complete");
+        }
+    });
+}
+
+
+
