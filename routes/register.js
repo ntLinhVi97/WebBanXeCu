@@ -5,15 +5,18 @@ var nhanvienCollection = require('../schema/nhanvien')
 var nguoibanCollection = require('../schema/nguoiban')
 var taikhoanCollection = require('../schema/taikhoan')
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-  var data = {
+
+router.post('/', function (req, res, next) {
+  var data = { //test data
     id: uuid(),
-    hoten: "vailon",
+    tendangnhap: "abc",
     bophan: "tiepdon"
   }
-  console.log(req.body.hoten);
 
-  nhanvienCollection.create(data, function (err, nhanvien) {
+  console.log(req.body.userNameSignUp); //khong lay duoc data len
+
+  //luu vao table nao thi xai cai do
+  taikhoanCollection.create(data, function (err, nhanvien) {
     if (err) {
       return console.log("error on saving doc")
     } else {

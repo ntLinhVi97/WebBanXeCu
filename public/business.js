@@ -27,8 +27,20 @@ function showSignUp() {
         showLogin();
     })
     $('#signUpButton1').click(function () {
-        showLogin();
+        registerAccount();
     })
+}
+
+//create account request
+var accountInfo = ["#userNameSignUp", "#exampleFormControlSelect1", "#passwordSignUp"];
+function registerAccount(){
+    $.ajax({
+        type: 'POST',
+        url: 'localhost:3000/register',
+        data: accountInfo,
+        dataType: "text",
+        success: function(resultData) { alert("Save Complete") }
+  });  
 }
 
 // registration

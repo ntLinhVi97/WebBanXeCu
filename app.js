@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 })); 
 
-app.listen(8080, () => console.log("Server is running at port 3000"));
+app.listen(3000, () => console.log("Server is running at port 3000"));
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
